@@ -1,0 +1,64 @@
+// colors
+$black-clr:#1F1F25;
+$grey-clr:#B2B2B4;
+$brand-color:#18A2E8;
+$white-color:#ffffff;
+$light-grey-clr:#DFDFDF;
+$dark-grey-clr:#F6F6F6;
+$light-blk-clr:#45414E1A;
+$red-clr:#EB1F1F;
+
+// fonts
+$font-primary-en: 'gilroy-Regular';
+$font-semibold:'gilroy-semibold';
+$font-bold:'gilroy-Bold';
+$font-medium:'gilroy-medium';
+$font-exBold:'gilroy-extrabold';
+
+
+// Transition
+$common-trans: .3s ease;
+
+
+
+/* clearfix */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/* center block */
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* center vertically */
+@mixin center-vertically {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefix(transform, translate(-50%, -50%), "webkit" "ms");
+}
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+
+
+

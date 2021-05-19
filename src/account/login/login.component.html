@@ -1,0 +1,65 @@
+﻿<div [@routerTransition]>
+  <div class="login-signup-wrapper">
+    <div class="sidebar-image">
+      <img src="../../assets/img/login-sidebar.jpg" alt="" />
+    </div>
+    <div class="login-signup-wrap-content">
+      <div class="login-signup-wrap-content-wrap">
+        <h1>{{ "LogIn" | localize }}</h1>
+        <div class="custom-input-wrap">
+          <label>Email</label>
+          <input
+            type="text"
+            class="custom-input"
+            name="userNameOrEmailAddress"
+            [(ngModel)]="authService.authenticateModel.userNameOrEmailAddress"
+            [placeholder]="'UserNameOrEmail' | localize"
+            required
+            maxlength="256"
+            #userNameOrEmailAddressModel="ngModel"
+            #userNameOrEmailAddressEl
+          />
+          <abp-validation-summary
+            [control]="userNameOrEmailAddressModel"
+            [controlEl]="userNameOrEmailAddressEl"
+          ></abp-validation-summary>
+        </div>
+        <div class="custom-input-wrap">
+          <label>Password</label>
+          <input
+            type="Password"
+            class="custom-input"
+            name="password"
+            [(ngModel)]="authService.authenticateModel.password"
+            [placeholder]="'Password' | localize"
+            required
+            maxlength="32"
+            #passwordModel="ngModel"
+            #passwordEl
+          />
+          <abp-validation-summary
+            [control]="passwordModel"
+            [controlEl]="passwordEl"
+          ></abp-validation-summary>
+        </div>
+        <div class="forget-link">
+          <a class="grey-btn" (click)="resetPassword()">Forgot Password?</a>
+        </div>
+        <div class="form-group">
+          <input
+            type="checkbox"
+            id="html"
+            name="rememberMe"
+            [(ngModel)]="authService.rememberMe"
+          />
+          <label for="html">{{ "RememberMe" | localize }}</label>
+        </div>
+        <div class="submit-btn">
+          <a class="custom-btn" (click)="login()"
+            ><span>{{ "LogIn" | localize }}</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

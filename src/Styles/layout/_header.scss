@@ -1,0 +1,18 @@
+.header{
+    padding: 10px 15px;
+    @include breakpoint(laptop){
+        padding: 6px 15px;
+    }
+    width: calc(100% - 200px);
+    border-bottom: 1px solid $light-grey-clr;
+    @include custom-flex-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 220px;
+    background-color: $white-color;
+    z-index: 999;
+    .right-header-content{
+        @include custom-flex;
+    }
+}

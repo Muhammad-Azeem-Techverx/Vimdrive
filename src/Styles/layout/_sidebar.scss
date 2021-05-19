@@ -1,0 +1,37 @@
+.sidebar{
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $brand-color;
+    padding: 20px 15px;
+    .logo-wrapper{
+        width: 100%;
+        padding: 5px 10px;
+        background: $white-color;
+        height: 46px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .sidebar-links-ul{
+        padding: 20px 0;
+        max-height: calc(100% - 30px);
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        li{
+            padding: 3px 0;
+            a{
+                span{
+                    width: 22px;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+    }
+}

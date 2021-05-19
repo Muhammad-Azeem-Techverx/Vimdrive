@@ -1,0 +1,29 @@
+@mixin custom-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin  custom-transition {
+  transition:.3s ease-in;
+}
+@mixin custom-flex-between{
+  @include custom-flex;
+  justify-content: space-between;
+}
+@mixin custom-flex-end{
+  @include custom-flex;
+  justify-content: flex-end;
+}
+@mixin custom-flex-start {
+  @include custom-flex;
+  justify-content: flex-start;
+}
+@mixin  custom-shadow {
+  box-shadow: 3px 3px 14px -5px rgba(69,65,78,1); 
+}
+@mixin content-after{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
